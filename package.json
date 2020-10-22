@@ -14,18 +14,16 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@apollo/client": "^3.2.5",
-    "apollo-link-context": "^1.0.20",
-    "apollo-server-lambda": "^2.18.2",
+    "@reach/dialog": "^0.11.2",
+    "@reach/tabs": "^0.11.2",
+    "@reach/visually-hidden": "^0.11.1",
     "axios": "^0.20.0",
-    "cross-fetch": "^3.0.6",
     "dotenv": "^8.2.0",
-    "faunadb": "^3.0.1",
     "gatsby": "^2.24.79",
-    "graphql": "^15.3.0",
-    "netlify-identity-widget": "^1.9.1",
+    "gatsby-plugin-netlify-identity": "^0.0.3",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-netlify-identity-widget": "^0.2.7"
   },
   "devDependencies": {
     "prettier": "2.1.2"
