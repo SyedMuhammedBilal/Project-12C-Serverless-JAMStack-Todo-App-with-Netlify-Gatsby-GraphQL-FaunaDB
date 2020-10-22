@@ -7,10 +7,10 @@ const Note = ({ note, reloadNotes }) => {
   }
 
   return (
-    <> 
+    <div> 
       <p>{note.text}</p>
       <button onClick={handleDelete}>Delete</button>
-    </>
+    </div>
   )
 };
 
