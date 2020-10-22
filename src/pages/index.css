@@ -1,92 +1,286 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-body,
-html {
-  height: 100%;
+body {
   margin: 0;
-  background-color: #292f4c;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #EBECF0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  border: 1px solid #dedede;
-  background-color: #fff;
-  height: 100vh;
-  padding: 2rem;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
-h1 {
-  text-align: center;
-}
-label {
-  width: 100%;
-}
-textarea {
-  border: .125rem solid #aaa;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-family: inherit;
-  font-size: 1.25em;
-  font-weight: 300;
-  margin-top: .5em;
-  padding: .5em;
-  transition: background-color 250ms ease-out;
-  width: 100%;
-  display: block;
-}
-form.note-form {
-  margin: 2rem auto;
+
+
+.form {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.save-button, .login-btn {
-  background-color: #512da8;
-  border: 0;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-family: inherit;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  margin-left: 20px;
-}
-.login-btn{
-  margin: 0 auto;
-  display: block;
-  background-color: #663399;
-}
-button[type="submit"]:hover,button[type="submit"]:focus {
-  background-color: #7e56e0;
-}
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-ul li {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  border: 1px solid #ccc;
-  background-color: #f5f5f5;
-  margin: 10px 0;
-  padding-left: 20px;
+  flex-direction: column; 
+  min-height: 90vh;
 }
-ul li button {
-  padding: 10px;
-  height: 40px;
-  margin: 0 20px;
+
+.form h1 {
+  color: #4e4e4e;
+  text-transform: uppercase;
+  letter-spacing: 4px; 
+}
+
+.Form {
+  flex-direction: column;
+  position: relative;
+  display: flex;
+  width: 350px;
+  padding: 40px 40px 60px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #EBECF0;
+  box-shadow:  3px 3px 5px #BABECC,  -5px -5px 10px #FFF;
+}
+
+@media (max-width: 437px) {
+  .Form {
+      width: 320px;
+  }
+  .Form h1 {
+      font-size: 27px;
+      letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 414px) {
+  .Form {
+      width: 270px !important;
+  }
+  .Form h1 {
+      font-size: 25px !important;
+      letter-spacing: 1px;
+  }
+  .Form .inputBox {
+      height: 42px !important;
+      margin-top: 24px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .Form {
+      width: 248px !important;
+  }
+  .Form h1 {
+      font-size: 24px !important;
+      letter-spacing: 1px;
+  }
+  .Form .inputBox {
+      height: 40px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .Form {
+      width: 255px;
+  }
+  .Form h1 {
+      font-size: 21px;
+      letter-spacing: 0.5px;
+  }
+  .Form .inputBox {
+      height: 43px;
+      margin-top: 27px;
+      font-size: 16px;
+  }
+  .Form .sign-btn {
+      height: 43px;
+      margin-top: 28px;
+      font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Form {
+      width: 335px;
+  }
+  .Form h1 {
+      font-size: 28px;
+  }
+  .Form .inputBox {
+      height: 52px;
+  }
+  .Form .sign-btn {
+      height: 52px;   
+  }
+}
+
+@media (max-width: 768px) {
+  .Form {
+      width: 435px;
+  }
+  .Form h1 {
+      font-size: 38px;
+  }
+  .Form .inputBox {
+      height: 62px;
+      font-size: 21px;
+  }
+  .Form .sign-btn {
+      height: 62px; 
+      font-size-adjust: 23px;  
+  }
+}
+
+.mobil {
+  margin-right: 3%;
+}
+
+@media (max-width: 375px) {
+  .mobil {
+    margin-right: 8%;
+  }
+}
+
+@media (max-width: 414px) {
+  .mobil {
+    margin-right: 8%;
+  }
+}
+
+.Form h1 {
+  color: #2b2b2b;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.Form .inputBox {
+  margin-top: 20px;  
+  height: 50px;
+  background-color: #EBECF0;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 18px;
+  color: #03a9f4;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+}
+
+.Form .sign-btn {
+  margin-top: 20px;  
+  width: 100%;
+  height: 50px;
+  background: #131419;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 18px;
+  color: #03a9f4;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.1),
+              2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.Form .sign-btn:active {
+  margin-top: 20px;  
+  width: 100%;
+  height: 50px;
+  background: #131419;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  padding: 5px 15px;
+  color: #006c9c;
+  font-size: 18px;
+  color: #03a9f4;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.1),
+              inset 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.Form .inputBox::placeholder {
+  color: #555;
+  font-size: 18px;
+}
+
+.forget {
+  margin-top: 30px;
+  color: #555;
+}
+
+.forget i {
+  color: #ff0047;
   cursor: pointer;
 }
-ul li p{
-  overflow-y: scroll;
-  max-height: 4.5em;
-  width: 100%;
+
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,900');
+
+.list-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-head h1 {
+  color: #c7c7c7;
+}
+
+.container00 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+width: 100%;
+height: 40vh;
+}
+
+.box00 {
+flex-direction: column;
+width: 60%;
+height: 65%;
+background: #131419;;
+border-radius: 20px;
+box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+              5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text00 {
+width: 80%;
+height: auto;
+padding: 4%;
+}
+.text00 h1 {
+  color: #c7c7c7;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.text00 a {
+  color: #c7c7c7;
+  font-size: 2em;
+  margin-top: 2em;
+  line-height: 1.45em;
+}
+
+@media (max-width: 375px) {
+  .box00 {
+      width: 80%;
+  }
+}
+
+@media(max-width: 375px) {
+  .text00 {
+      font-size: 1em !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .box00 {
+      width: 80%;
+  }
+}
+
+@media (max-width: 375px) {
+  .text00 {
+      font-size: 2em;
+  }
 }

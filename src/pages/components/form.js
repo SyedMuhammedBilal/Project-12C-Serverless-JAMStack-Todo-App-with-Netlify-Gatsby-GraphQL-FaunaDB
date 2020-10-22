@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import '../index.css';
 
 const Form = ({reloadNotes}) => {
   const [text, setText] = useState('');
@@ -15,15 +16,15 @@ const Form = ({reloadNotes}) => {
   } 
 
   return (
-    <form className="note-form" onSubmit={handleSubmit}>
-      <label htmlFor="textarea">Add todo
-        <textarea
-          id="textarea"
+    <form className="Form" onSubmit={handleSubmit}>
+      <h1>Add your todo</h1>
+        <input
+          className='inputBox'
+          placeholder='Enter your todo...'
           value={text}
           onChange={event => setText(event.target.value)}
-        ></textarea>
-      </label>
-      <button className="save-button" type="submit">Add</button>
+        ></input>
+      <button className="sign-btn" type="submit">Add</button>
     </form>
   );
 };

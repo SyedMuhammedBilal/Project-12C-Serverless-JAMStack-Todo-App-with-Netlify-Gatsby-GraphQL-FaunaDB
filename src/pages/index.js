@@ -3,6 +3,7 @@ import axios from "axios";
 import './index.css';
 import Note from './components/note.js';
 import Form from './components/form.js';
+import Loader from './components/Loader.js';
 
 export default () => {
   const [status, setStatus] = useState("loading");
@@ -27,20 +28,26 @@ export default () => {
   }, [status]);
 
   return (
-    <main>
-      <h1>The Todo App</h1>
+    <>
+    <div className='form'>
+      <h1>Todo App</h1>
+      <br/>
       <Form reloadNotes={reloadNotes}/>
+      <br />
+      <br />
+      <h1>Todo List</h1>
+    </div>
       {notes ? (
         <ul>
           {notes.map(note => (
-            <li key={note._id}>
+            <div className='mobil' key={note._id}>
               <Note note={note.text}/>
-            </li>
+            </div>
           ))}
         </ul>
       ) : (
-        <p>Loading notes...</p>
+        <Loader />
       )}
-    </main>
+    </>
   );
 };
