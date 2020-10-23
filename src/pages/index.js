@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './index.css';
+import './components/note.css';
 import Note from './components/note.js';
 import Form from './components/form.js';
 import Loader from './components/Loader.js';
@@ -26,6 +27,8 @@ export default () => {
       canceled = true;
     };
   }, [status]);
+  
+  console.table(notes);
 
   return (
     <>
@@ -41,7 +44,13 @@ export default () => {
         <ul>
           {notes.map(note => (
             <div className='mobil' key={note._id}>
-              <Note reloadNotes={reloadNotes} note={note}/>
+              <div className="blogs-cont">
+                <div className="blogs-box">
+                    <h1>Your Task:</h1>
+                    <h2>{note.text}</h2>
+                    <Note id={note._id} reloadNotes={reloadNotes} /> 
+                </div> 
+              </div>
             </div>
           ))}
         </ul>
