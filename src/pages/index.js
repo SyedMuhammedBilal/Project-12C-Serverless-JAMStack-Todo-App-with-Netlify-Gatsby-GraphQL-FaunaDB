@@ -41,7 +41,7 @@ export default () => {
         <ul>
           {notes.map(note => (
             <div className='mobil' key={note._id}>
-              <Note note={note.text}/>
+              <Note reloadNotes={reloadNotes} note={note}/>
             </div>
           ))}
         </ul>
